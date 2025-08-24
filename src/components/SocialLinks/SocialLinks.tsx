@@ -11,15 +11,13 @@ export default function SocialLinks() {
       const icons = iconsRef.current.children;
       
       gsap.fromTo(icons, {
-        y: -50,
         opacity: 0,
-        scale: 0.8
+        y: 30
       }, {
-        y: 0,
         opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        ease: "bounce.out",
+        y: 0,
+        duration: 0.6,
+        ease: "power2.out",
         stagger: 0.1,
         delay: 0.5
       });

@@ -1,5 +1,6 @@
 import { getTranslations, type Locale } from '../../lib/translations';
 import SocialLinks from '../SocialLinks';
+import AnimatedText from '../AnimatedText';
 import styles from './ComingSoon.module.css';
 
 type Props = {
@@ -11,10 +12,10 @@ export default function ComingSoon({ locale }: Props) {
 
   return (
     <main className={styles.constructionSection}>
-      <div className={styles.messageWrapper}>
+      <AnimatedText className={styles.messageWrapper}>
         {t.underConstruction.message} <br /> {t.underConstruction.messageSecondLine}
         <span className="gradient-txt"> {t.underConstruction.soon}</span>.
-      </div>
+      </AnimatedText>
       <SocialLinks />
     </main>
   );
