@@ -4,9 +4,19 @@
   cursor: pointer;
 }
 
+.socialsWrapper img {
+  width: 24px;
+  height: 24px;
+}
+
 @media (min-width: 768px) {
   .socialsWrapper {
     gap: 3rem;
+  }
+  
+  .socialsWrapper img {
+    width: 35px;
+    height: 35px;
   }
 }
 

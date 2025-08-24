@@ -1,9 +1,9 @@
-/* Mobile First - Default styles for screens smaller than 768px */
 .constructionSection {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
   padding: 2rem;
   gap: 4rem;
   align-items: center;
