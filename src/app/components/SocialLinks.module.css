@@ -1,0 +1,17 @@
+.socialsWrapper {
+  display: flex;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .socialsWrapper {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .socialsWrapper {
+    gap: 5rem;
+  }
+}

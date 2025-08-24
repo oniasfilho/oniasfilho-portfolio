@@ -1,0 +1,28 @@
+:root {
+  --gradient-primary: linear-gradient(
+    90deg,
+    #b16cea 8%,
+    #ff5e69 40%,
+    #ff8a56 77%,
+    #ffa84b 91%
+  );
+  --dark-grey: #444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gradient-txt {
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

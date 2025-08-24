@@ -1,0 +1,49 @@
+/* Mobile First - Default styles for screens smaller than 768px */
+.constructionSection {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Display', sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  color: var(--dark-grey);
+}
+
+.messageWrapper {
+  max-width: 417px;
+}
+
+@media (min-width: 768px) {
+  .constructionSection {
+    padding: 8rem;
+    gap: 6rem;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: -1.5px;
+  }
+
+  .messageWrapper {
+    max-width: 534px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .constructionSection {
+    padding: 15rem;
+    gap: 10rem;
+    font-size: 48px;
+    line-height: 74.8px;
+    letter-spacing: -2px;
+  }
+
+  .messageWrapper {
+    max-width: 650px;
+  }
+}
