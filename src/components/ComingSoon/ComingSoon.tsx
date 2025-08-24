@@ -1,18 +1,12 @@
-import { useEffect, useState } from 'react';
 import { getTranslations, type Locale } from '../../lib/translations';
 import SocialLinks from '../SocialLinks';
 import styles from './ComingSoon.module.css';
 
-export default function ComingSoon() {
-  const [locale, setLocale] = useState<Locale>('en');
-  
-  useEffect(() => {
-    fetch('/api/locale')
-      .then(res => res.json())
-      .then(data => setLocale(data.locale))
-      .catch(() => setLocale('en'));
-  }, []);
-  
+type Props = {
+  locale: Locale;
+};
+
+export default function ComingSoon({ locale }: Props) {
   const t = getTranslations(locale);
 
   return (
