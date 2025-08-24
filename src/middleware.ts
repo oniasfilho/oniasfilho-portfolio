@@ -1,13 +1,14 @@
+import { geolocation } from '@vercel/functions';
 import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const country = request.headers.get('x-vercel-ip-country');
+  const { country } = geolocation(request);
   const locale = country === 'BR' ? 'pt-BR' : 'en';
   
-  const url = request.nextUrl.clone();
-  url.locale = locale;
+  const response = NextResponse.next();
+  response.headers.set('x-locale', locale);
   
-  return NextResponse.rewrite(url);
+  return response;
 }
 
 export const config = {

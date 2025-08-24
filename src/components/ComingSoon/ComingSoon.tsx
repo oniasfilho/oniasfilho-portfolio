@@ -1,11 +1,18 @@
-import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { getTranslations, type Locale } from '../../lib/translations';
 import SocialLinks from '../SocialLinks';
 import styles from './ComingSoon.module.css';
 
 export default function ComingSoon() {
-  const router = useRouter();
-  const locale = (router.locale as Locale) || 'en';
+  const [locale, setLocale] = useState<Locale>('en');
+  
+  useEffect(() => {
+    fetch('/api/locale')
+      .then(res => res.json())
+      .then(data => setLocale(data.locale))
+      .catch(() => setLocale('en'));
+  }, []);
+  
   const t = getTranslations(locale);
 
   return (
