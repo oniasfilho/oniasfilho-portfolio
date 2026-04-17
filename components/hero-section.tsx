@@ -1,11 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center px-5 md:px-8 overflow-hidden bg-primary">
+    <section className="relative min-h-screen flex items-center md:py-22 px-5 md:px-8 overflow-hidden bg-primary">
 
       <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
         <div

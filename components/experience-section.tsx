@@ -50,7 +50,7 @@ export function ExperienceSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section id="experience" className="py-24 md:py-32 px-5 md:px-8">
+    <section id="experience" className="pb-12 pt-6 px-5 md:px-8">
       <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
