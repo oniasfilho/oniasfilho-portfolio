@@ -12,6 +12,8 @@ export const projects = [
 The project required deep expertise in Node.js internals, performance optimization, and distributed systems. We implemented custom caching strategies, intelligent request routing, and graceful degradation patterns to ensure 99.99% uptime even during peak traffic events like Black Friday.
 
 Key technical achievements include support for Node.js versions 12 through 22 with automatic compatibility layers, seamless integration with React, Vue, and vanilla JavaScript applications, and a plugin architecture that allows teams to extend functionality without modifying core code.`,
+    liveUrl: null,
+    githubUrl: null,
     images: [
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=800&fit=crop",
@@ -31,6 +33,8 @@ Key technical achievements include support for Node.js versions 12 through 22 wi
 The architecture introduces a sophisticated module federation system that handles runtime integration of separately built applications. Each micro frontend owns its domain, from development through production, with isolated deployment pipelines and rollback capabilities.
 
 Performance was a critical focus—we implemented lazy loading strategies, shared dependency management, and intelligent prefetching that reduced initial page loads by 40% while supporting the addition of new features without impacting existing functionality.`,
+    liveUrl: null,
+    githubUrl: null,
     images: [
       "https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=800&fit=crop",
@@ -50,6 +54,8 @@ Performance was a critical focus—we implemented lazy loading strategies, share
 The system includes over 100 components with full accessibility compliance, responsive design patterns, and theme customization capabilities. We built automated visual regression testing, documentation generation, and version management tools that streamline the contribution process for design and engineering teams.
 
 A key innovation was the implementation of design tokens that bridge Figma designs directly to code, reducing the handoff time between design and development by 60% while ensuring pixel-perfect implementation of design specifications.`,
+    liveUrl: null,
+    githubUrl: null,
     images: [
       "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=600&h=800&fit=crop",
       "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=800&fit=crop",

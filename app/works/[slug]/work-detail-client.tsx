@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
@@ -16,6 +16,8 @@ interface Project {
   service: string
   role: string
   overview: string
+  liveUrl: string | null
+  githubUrl: string | null
   images: string[]
 }
 
@@ -80,6 +82,32 @@ export function WorkDetailClient({ project, nextProject }: WorkDetailClientProps
                 <p className="text-foreground font-medium">{project.year}</p>
               </div>
             </div>
+            {(project.liveUrl || project.githubUrl) && (
+              <div className="flex items-center gap-6 mt-10">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-foreground hover:text-accent transition-colors duration-300 font-medium"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Live Site
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-foreground hover:text-accent transition-colors duration-300 font-medium"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    GitHub
+                  </a>
+                )}
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
